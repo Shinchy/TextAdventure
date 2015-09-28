@@ -39,8 +39,11 @@
 		    };
 		    _this.results.push(newCommand);
 
-		    // Scroll the container into view, just used basic JS for this
-		    // as there was no real need to overcomplicate things
+		    /**
+		     * Scroll the container into view, just used basic JS for this
+		     * as there was no real need to overcomplicate things, it has to 
+		     * take a timeout delay to account for Angular adding the new data.
+		     */
 		    setTimeout(function(){
 		    	_responseWindow.scrollTop = _responseWindow.scrollHeight;
 		    },500);
