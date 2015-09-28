@@ -6,17 +6,26 @@
 		{
 			"input": "look at room",
 			"responses": "look",
-			"current": 0
+			"current": 0,
+			"active": true
 		}, 
 		{
 			"input": "look at me",
 			"responses": "self",
-			"current": 0
+			"current": 0,
+			"active": true
 		},
 		{
 			"input": "say",
 			"responses": "echo",
-			"current": 0
+			"current": 0,
+			"active": true
+		},
+		{
+			"input": "wave at me",
+			"responses": "wave",
+			"current": 0,
+			"active": true
 		}
 	],
 	"responses": [
@@ -44,6 +53,15 @@
 				{
 					"id": 0,
 					"text": "{{message}} you say to yourself."
+				}
+			]
+		},
+		{
+			"name": "wave",
+			"outputs": [
+				{
+					"id": 0,
+					"text": "You wave to yourself... how strange."
 				}
 			]
 		}

@@ -11,6 +11,10 @@ div#main {
   header {
     width: 100%; height: auto; padding: 10px; margin: 0; text-align: left; position: relative; background-color: #FFF; 
     h1 { color: #000; margin: 0; }
+
+    @media only screen and (max-width : $mobileWidth) {
+      position: absolute; left: 0; top: 0;
+    }
   }
 
   // footer
@@ -35,6 +39,11 @@ div#main {
 
     }
 
+    @media only screen and (max-width : $mobileWidth) {
+      height: 70%; position: absolute; top: 15%; 
+      -webkit-overflow-scrolling: touch;
+    }
+
   }
 
 
@@ -44,6 +53,9 @@ div#main {
     height: 10%; position: relative;
 
     input[type='text'] { background: none; border: none; width: 100%; padding: 20px; @include PixelFont(36px,400,$fontDefaultColor,0); }
+
+
+    @media only screen and (max-width : $mobileWidth) { height: 15%; width: 100%; position: fixed; bottom: 0; left: 0; background-color: $bgBlue; }
     
   }
   
@@ -61,10 +73,6 @@ div#main {
 *******************************/
 
 /* Mobile Only */
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : $mobileWidth) {
   
-}
-
-@media only screen and (max-width : 1000px) {
-
 }
