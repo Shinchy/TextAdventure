@@ -1,6 +1,7 @@
 {
 	"title": "Text Adventure",
 	"intro": "Hello, let us start our Adventure!",
+	"startmessage": "Try typing in some commands to see what happens...",
 	"commands": [
 		{
 			"input": "look at room",

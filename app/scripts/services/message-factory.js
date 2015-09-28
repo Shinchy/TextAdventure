@@ -21,10 +21,10 @@
 	function messageData($rootScope) {
 
 		var messenger = {
-			prepMessage: function(msg) {
+			prepMessage: function(msg,resp) {
 				
 				// Set the default values
-				var response = 'Nothing happens...';
+				var response = resp || 'Nothing happens...';
 				var state = false;
 
 				// Check if the message is good to go or not
@@ -94,7 +94,7 @@
 			// Set this to the checker for the messages
 
 			// prepate the intro
-			messenger.prepMessage( data.intro || 'Hello...' );
+			messenger.prepMessage( data.intro || 'Hello...', data.startmessage || '...' );
 		});
 
 		// Returns the messanger object from this factory
