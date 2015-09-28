@@ -7,6 +7,9 @@
  */ 
 (function(angular){
 
+	// A reference to the response window used by the application
+	var _responseWindow = document.getElementById('game-response');
+
 	/**
 	 * Default Method to handle the response that gets given to the controller
 	 * 
@@ -35,6 +38,12 @@
 		    	state: messageObj.state
 		    };
 		    _this.results.push(newCommand);
+
+		    // Scroll the container into view, just used basic JS for this
+		    // as there was no real need to overcomplicate things
+		    setTimeout(function(){
+		    	_responseWindow.scrollTop = _responseWindow.scrollHeight;
+		    },500);
 		});
 
 		/**
