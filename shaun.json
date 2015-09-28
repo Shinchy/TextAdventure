@@ -1,0 +1,49 @@
+{
+    "name": "Shaun Hinchy",
+    "github": "Shinchy",
+    "personal_website": "http://www.shinchy.com",
+    "relavent_social_media": [
+        "http://twitter.com/shinchys"
+    ],
+    "skill_lists": {
+        "major": [
+            {
+                "name": "HTML",
+                "years_of_experience": 12
+            },
+            {
+                "name": "Javascript",
+                "years_of_experience": 10
+            },
+            {
+                "name": "CSS",
+                "years_of_experience": 10
+            },
+            {
+                "name": "AS3",
+                "years_of_experience": 6
+            },
+            {
+                "name": "PHP",
+                "years_of_experience": 5
+            },
+            {
+                "name": "Agile Practices",
+                "years_of_experience": 5
+            }
+        ],
+        "minor": [
+            "Python",
+            "Haskell",
+            ".NET",
+            "C#",
+            "Java",
+            "Linux Server Admin"
+        ],
+        "learning": [
+            "Ruby",
+            "Rasberry Pi",
+            "SAP"
+        ]
+    }
+}
