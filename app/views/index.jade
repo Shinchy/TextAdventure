@@ -19,7 +19,7 @@ div#main
 		div(ng-hide="resCtrl.loaded")
 			p Loading...
 		ul(ng-show="resCtrl.loaded").response-list
-			li(ng-repeat='res in resCtrl.results',ng-class="{ correct: res.state }") 
+			li(ng-repeat='res in resCtrl.results',ng-class="{'correct':res.state}")
 				p.user-message {{res.userMessage}}
 				p.response-message {{res.response}}
 

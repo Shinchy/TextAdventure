@@ -30,7 +30,7 @@
       <p>Loading...</p>
     </div>
     <ul ng-show="resCtrl.loaded" class="response-list">
-      <li ng-repeat="res in resCtrl.results" ng-class="{ correct: res.state }"> 
+      <li ng-repeat="res in resCtrl.results" ng-class="{'correct':res.state}">
         <p class="user-message">{{res.userMessage}}</p>
         <p class="response-message">{{res.response}}</p>
       </li>

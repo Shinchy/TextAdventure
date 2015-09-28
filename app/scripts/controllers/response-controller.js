@@ -31,7 +31,8 @@
 		    var newCommand = {
 		    	command: messageObj.command,
 		    	userMessage: messageObj.userMessage,
-		    	response: messageObj.response
+		    	response: messageObj.response,
+		    	state: messageObj.state
 		    };
 		    _this.results.push(newCommand);
 		});

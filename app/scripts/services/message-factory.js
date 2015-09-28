@@ -48,6 +48,7 @@
 
 				// Create an answer object to hold the response
 				var answerObj = {
+					command: true,
 					userMessage: msg,
 					response: response,
 					state: state
