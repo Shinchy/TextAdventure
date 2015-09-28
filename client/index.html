@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="textAdventureApp">
+
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="author" content="Shaun Hinchy" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+
+  <!-- Site Properities -->
+  <title>Text Adventure</title>
+  
+  <style>
+  /* First Load Properties */
+  </style>
+  
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body id="home">
+<div id="main">
+  <header>
+    <h1>Text Adventure</h1>
+  </header>
+  <!-- Where the game will post the messages it recieves-->
+  <div ng-controller="ResponseController as resCtrl" id="game-response">
+    <div ng-hide="resCtrl.loaded">
+      <p>Loading...</p>
+    </div>
+    <ul ng-show="resCtrl.loaded" class="response-list">
+      <li ng-repeat="res in resCtrl.results" ng-class="{ correct: res.state }"> 
+        <p class="user-message">{{res.userMessage}}</p>
+        <p class="response-message">{{res.response}}</p>
+      </li>
+    </ul>
+  </div>
+  <!-- Where the user will input all their commands-->
+  <div ng-controller="UserController as userCtrl" id="game-input">
+    <form ng-submit="userCtrl.submitRequest()">
+      <input type="text" placeholder="Input your command..." ng-model="userCtrl.currentRequest"/>
+    </form>
+  </div>
+  <footer>
+  </footer>
+</div>	
+    
+    <!-- Compiled JS -->
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <!-- My own JS files -->
+    <script type="text/javascript" src="js/app.min.js"></script>
+
+</body>
+</html>

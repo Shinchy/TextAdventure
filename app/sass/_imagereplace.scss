@@ -1,0 +1,14 @@
+/*******************************
+  Stylesheet for all the image replacements 
+  used throughout the site
+*******************************/
+
+#main {
+
+	[class*='txt-logo'] { background-size: 100% auto; background-size: contain; background-repeat: no-repeat; background-position: center center; max-width: 95%; }
+
+	@media only screen and (max-width : $mobileWidth) {
+		[class*='txt-logo'] { width: 95%; }
+	}
+
+}

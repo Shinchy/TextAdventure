@@ -1,0 +1,35 @@
+//- TEXT ADVENTURE Version 1.0
+//- Static, there is no need for Node with this one as it is a basic AngularJS App
+//- ...
+
+//- Default Settings file
+include settings/settings.jade
+
+//- Header
+include includes/header.html
+
+//- Main Content for the whole site
+div#main
+
+	header
+		h1 Text Adventure
+	
+	// Where the game will post the messages it recieves
+	div(ng-controller='ResponseController as resCtrl')#game-response
+		div(ng-hide="resCtrl.loaded")
+			p Loading...
+		ul(ng-show="resCtrl.loaded").response-list
+			li(ng-repeat='res in resCtrl.results',ng-class="{ correct: res.state }") 
+				p.user-message {{res.userMessage}}
+				p.response-message {{res.response}}
+
+	// Where the user will input all their commands
+	div(ng-controller='UserController as userCtrl')#game-input
+		form(ng-submit='userCtrl.submitRequest()')
+			input(type='text',placeholder='Input your command...',ng-model='userCtrl.currentRequest')
+
+	footer
+		//- Footer information
+
+//- footer
+include includes/footer.html

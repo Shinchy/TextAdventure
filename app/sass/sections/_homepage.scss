@@ -1,0 +1,70 @@
+/*******************************
+  The Homepage
+*******************************/
+
+div#main { 
+
+  width: 100%; height: 100%; position: relative; margin: 0; padding: 0; background-color: $bgBlue;
+
+  
+  // header information
+  header {
+    width: 100%; height: auto; padding: 10px; margin: 0; text-align: left; position: relative; background-color: #FFF; 
+    h1 { color: #000; margin: 0; }
+  }
+
+  // footer
+  footer {
+    
+  }
+
+  // The response that is given to the user from the input command, this is the core
+  // area of the game
+  div#game-response {
+    // main
+    width: 100%; height: 80%; padding: 0; margin: 0; position: relative; overflow: hidden; overflow-y: scroll;
+
+    ul.response-list {  
+      width: 100%; margin: 0; padding: 0; list-style: none;
+      li { 
+        width: 100%; padding: 10px 20px; text-align: left; margin: 0;
+        p { margin: 0; }
+        p.response-message { color: #CCC; }
+        &.correct p.response-message { color: #FF6008; }
+      }
+
+    }
+
+  }
+
+
+  // The input area of the game, this is the only part that the user has to input text
+  div#game-input {
+    
+    height: 10%; position: relative;
+
+    input[type='text'] { background: none; border: none; width: 100%; padding: 20px; @include PixelFont(36px,400,$fontDefaultColor,0); }
+    
+  }
+  
+  
+  
+}
+
+
+
+
+
+
+/*******************************
+          Responsive
+*******************************/
+
+/* Mobile Only */
+@media only screen and (max-width : 768px) {
+  
+}
+
+@media only screen and (max-width : 1000px) {
+
+}

@@ -1,0 +1,68 @@
+/*******************************
+  Universal Stylesheet
+*******************************/
+
+/*******************************
+  Global
+*******************************/
+html, body {
+  height: 100%; margin: 0; padding: 0; color: $fontDefaultColor; text-rendering: optimizeLegibility; min-width: 320px;
+}
+
+/*******************************
+  Universal Items All
+*******************************/
+.clearfix:before, .clearfix:after { content: " " /* 1 */; display: table /* 2 */; }
+.clearfix:after { clear: both; }
+
+header,nav,article,footer,section,aside,figure,figcaption{display:block}
+
+html * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+#main {margin: 0 auto; padding: 0; width: 100%; position: relative; top: 0; left: 0; font-family: 'FuturaStd',Tahoma,Arial,Sans-Serif; font-size: 12px; font-weight: normal; color: $fontDefaultColor; background-repeat: repeat-x; margin-bottom:0; text-align: center; }
+body a { text-decoration: none;color: $fontDefaultColor; transition: opacity .5s; -webkit-transform: translateZ(0); }
+body a.no-hover:hover { opacity: 1; }
+body a:hover {text-decoration: none; opacity: 0.7; }
+
+
+/* Set fonts used throughout */
+#main h1 { @include PixelFont(48px,100,$fontDefaultColor,2px); margin: 0 auto; }
+#main h1.sml-type { @include PixelFont(36px,400,$fontDefaultColor,1px); }
+#main h2 { @include PixelFont(36px,400,#111, 1px); line-height: normal; margin: 10px auto 0 auto; }
+#main h3 { @include PixelFont(22px,400,$fontDefaultColor,0.08em); line-height: normal; margin: 10px auto 0 auto; }
+#main h4 { @include PixelFont(22px,700,$fontDefaultColor,1px); line-height: normal; margin: 0; }
+#main h5 { @include PixelFont(16px,400,$fontDefaultColor,0.08em); line-height: normal; margin: 0; }
+#main p { @include PixelFont(24px,400,$fontDefaultColor, 0.04em); margin: 10px auto 0 auto; line-height: 28px; }
+#main p.sub { font-size: 15px; font-style: italic; }
+
+@media only screen and (max-width : $mobileWidth) { 
+  #main h2 { font-size: 20px; line-height: 28px; }
+  #main h3 { font-size: 18px; line-height: 24px; }
+}
+
+#main sub { font-size: 50%; vertical-align: baseline; position: relative; top: 0.4em; }
+
+/* Mobile based */
+#main .mobile-inline { display: none; }
+#main .mobile-inline-block { display: none; }
+#main .mobile-block { display: none; }
+#main .nothing { display: none; }
+
+nav.mobile-menu { display: none; }
+
+/* Positional */
+#main .top-right { position: absolute; top: 10px; right: 10px; }
+#main .top-left { position: absolute; top: 10px; left: 10px; }
+#main .bottom-right { position: absolute; bottom: 10px; right: 10px; }
+#main .bottom-left { position: absolute; bottom: 10px; left: 10px; }
+#main .bottom-right-abs { position: absolute; bottom: 0; right: 0; }
+#main .bottom-left-abs { position: absolute; bottom: 0; left: 0; }
+
+#main .table-cell-cont { width: 100%; height: 100%; display: table; }
+#main .table-cell { display: table-cell; vertical-align: middle; }
+
+/*
+ * Image replacement
+ */
+#main .ir:before { content: ""; width: 0; height: 150%; }
+#main .ir { display: block; text-indent: -9999px; background-repeat: no-repeat; overflow: hidden; background-color: transparent; border: 0; overflow: hidden; display: block; *text-indent: -9999px; }

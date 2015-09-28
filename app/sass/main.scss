@@ -1,0 +1,36 @@
+/*=====================================================================
+=            All Sass Files Come Together Right Now, Over Me          =
+=====================================================================*/
+
+// Grab our fonts from Google Fonts
+// This one is a nice pixel style font that fits the theme we are going for
+@import url(https://fonts.googleapis.com/css?family=VT323);
+
+// Mixins for Font Creation, keep things easier and more scalable
+@mixin PixelFont( $size, $weight: 400, $color: #000, $letterSpacing: 0 ) { 
+  font-family: 'VT323', Tahoma, sans-serif; font-weight: $weight; color: $color; font-size: $size; letter-spacing: $letterSpacing;
+}
+
+// Variables for commonly used items
+$imageDirectory: "/img";
+
+$siteWidth: 1200px;
+$siteWidthContent: 900px;
+$mobileWidth: 640px;
+
+// Some Common Colours
+$bgBlue: #0046E1;
+
+// Default font colours
+$fontDefaultColor: #FFF;
+
+
+
+// Universal items used by everything
+@import '_universal.scss';
+
+// Sections of the site that have a specific purpose
+@import './sections/_menu.scss';
+@import './sections/_homepage.scss';
+
+@import '_imagereplace.scss';

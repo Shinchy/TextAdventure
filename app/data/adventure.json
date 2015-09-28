@@ -1,0 +1,46 @@
+{
+	"title": "Text Adventure",
+	"commands": [
+		{
+			"input": "look at room",
+			"responses": "look"
+		}, 
+		{
+			"input": "look-at-me",
+			"responses": "self"
+		},
+		{
+			"input": "say",
+			"responses": "echo"
+		}
+	],
+	"responses": [
+		{
+			"name": "look",
+			"outputs": [
+				{
+					"id": 0,
+					"text": "You are standing in a tall dark room..."
+				}
+			]
+		},
+		{
+			"name": "self",
+			"outputs": [
+				{
+					"id": 0,
+					"text": "That's {{name}}, {{gender}} is wearing a {{colour}} outfit."
+				}
+			]
+		},
+		{
+			"name": "echo",
+			"outputs": [
+				{
+					"id": 0,
+					"text": "{{message}} {{name}} said to {{gender-self}}"
+				}
+			]
+		}
+	]
+}
