@@ -5,6 +5,10 @@ A simple text adventure built with AngularJS and Javascript. I banged this up in
 It makes use of Controllers over directives as the App didn't feel large enough to warrent them.
 Just in case you were wondering where they may be.
 
+You can find a working demo here:
+[http://www.shinchy.com/github/textadventure](http://www.shinchy.com/github/textadventure)
+
+
 # Rules
 
 There are 3 basic commands laid out

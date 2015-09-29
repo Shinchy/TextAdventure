@@ -29,11 +29,14 @@
 
 				// Check if the message is good to go or not
 				for(var i = 0; i < _commands.length; i++) {
-					if(msg.toLowerCase().substring(0, _commands[i].input.length) === _commands[i].input) {
+					if(( _commands[i].type === "starts" &&
+						 msg.toLowerCase().substring(0, _commands[i].input.length) === String(_commands[i].input)) ||
+					   ( _commands[i].type === "exact" && 
+					     msg.toLowerCase() === _commands[i].input)) {
 						// it's a command alright ...
 						state = true;
-						console.log(_responses);
-						// A great good case for the ES6 array.find function, but I'll stick with the old way for this
+						// A great good case for the ES6 array.find function, 
+						// but I'll stick with the old way for this
 						for(var j = 0; j < _responses.length; j++) {
 							if( _responses[j].name === _commands[i].responses ) {
 								// Set the response to what matches up with the data

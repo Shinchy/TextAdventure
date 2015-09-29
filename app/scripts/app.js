@@ -22,7 +22,7 @@
 (function(angular){
 	
 	// Private variables and settings
-	var _dataFileURL = '/data/adventure.json';
+	var _dataFileURL = 'data/adventure.json';
 
 	/**
 	 *	The applications init function, this is the first thing called

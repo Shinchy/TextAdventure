@@ -7,25 +7,29 @@
 			"input": "look at room",
 			"responses": "look",
 			"current": 0,
-			"active": true
+			"active": true,
+			"type": "exact"
 		}, 
 		{
 			"input": "look at me",
 			"responses": "self",
 			"current": 0,
-			"active": true
+			"active": true,
+			"type": "exact"
 		},
 		{
 			"input": "say",
 			"responses": "echo",
 			"current": 0,
-			"active": true
+			"active": true,
+			"type": "starts"
 		},
 		{
 			"input": "wave at me",
 			"responses": "wave",
 			"current": 0,
-			"active": true
+			"active": true,
+			"type": "exact"
 		}
 	],
 	"responses": [

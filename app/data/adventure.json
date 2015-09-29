@@ -1,17 +1,35 @@
 {
 	"title": "Text Adventure",
+	"intro": "Hello, let us start our Adventure!",
+	"startmessage": "Try typing in some commands to see what happens...",
 	"commands": [
 		{
 			"input": "look at room",
-			"responses": "look"
+			"responses": "look",
+			"current": 0,
+			"active": true,
+			"type": "starts with"
 		}, 
 		{
-			"input": "look-at-me",
-			"responses": "self"
+			"input": "look at me",
+			"responses": "self",
+			"current": 0,
+			"active": true,
+			"type": "exact"
 		},
 		{
 			"input": "say",
-			"responses": "echo"
+			"responses": "echo",
+			"current": 0,
+			"active": true,
+			"type": "exact"
+		},
+		{
+			"input": "wave at me",
+			"responses": "wave",
+			"current": 0,
+			"active": true,
+			"type": "exact"
 		}
 	],
 	"responses": [
@@ -29,7 +47,7 @@
 			"outputs": [
 				{
 					"id": 0,
-					"text": "That's {{name}}, {{gender}} is wearing a {{colour}} outfit."
+					"text": "That's you, you're not really doing anything... just standing there."
 				}
 			]
 		},
@@ -38,7 +56,16 @@
 			"outputs": [
 				{
 					"id": 0,
-					"text": "{{message}} {{name}} said to {{gender-self}}"
+					"text": "{{message}} you say to yourself."
+				}
+			]
+		},
+		{
+			"name": "wave",
+			"outputs": [
+				{
+					"id": 0,
+					"text": "You wave to yourself... how strange."
 				}
 			]
 		}
